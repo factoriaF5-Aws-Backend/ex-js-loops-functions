@@ -2,8 +2,7 @@ import {describe, it} from 'vitest';
 import assert from 'node:assert/strict';
 import { getNumbers, getFruits, getEvenNumbers, getPersonDetails, getMultiplicationTable 
     , fizzBuzz, sumArray
-} from './04-Loops.js';
-import {addNumbers, findMax, countVowels, getSquareRoot} from './06-Functions.js';
+} from '../src/04-Loops.js';
 
 
 describe('Loops', function() {
@@ -49,26 +48,3 @@ describe('Loops', function() {
     });
 });
 
-describe('Functions', function() {
-    it('should return the sum of two numbers', function() {
-        assert.equal(addNumbers(2, 3), 5);
-        assert.equal(addNumbers(-1, 1), 0);
-    });
-    //---------------------
-    it('should return the maximum number in the array', function() {
-        assert.equal(findMax([1, 2, 3, 4, 5]), 5);
-        assert.equal(findMax([-1, -2, -3, -4]), -1);
-        assert.equal(findMax([10, 10, 10]), 10);
-    });
-    //---------------------
-    it('should return the number of vowels in the string', function() {
-        assert.equal(countVowels('hello'), 2);
-        assert.equal(countVowels('world'), 1);
-        assert.equal(countVowels('aeiou'), 5);
-    });
-    //---------------------
-    it('should return the square root of a function', function() {
-        assert.equal(getSquareRoot(9), 81);
-        assert.equal(countVowels(0), 0);
-    });
-});
